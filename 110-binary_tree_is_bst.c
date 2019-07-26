@@ -14,7 +14,7 @@ int find_node(binary_tree_t *root, binary_tree_t *node)
 		return (1);
 	if (node->n < root->n)
 		return (find_node(root->left, node));
-	else
+	if (node->n > root->n)
 		return (find_node(root->right, node));
 	return (0);
 }
